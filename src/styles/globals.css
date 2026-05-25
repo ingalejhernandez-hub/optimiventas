@@ -1,0 +1,1533 @@
+:root {
+  --bg:#f7fbf9;
+  --surface:#fff;
+  --soft:#f0f8f5;
+  --text:#071827;
+  --muted:#526173;
+  --line:#dce8e3;
+  --primary:#0b7a4b;
+  --primary-dark:#075f3b;
+  --primary-soft:#e6f6ef;
+  --danger:#b42318;
+  --shadow:0 22px 60px rgba(7,24,39,.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(11,122,75,.08), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(13,59,102,.06), transparent 30%),
+    var(--bg);
+  color: var(--text);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  letter-spacing: -.055em;
+}
+
+p {
+  color: var(--muted);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 950;
+  letter-spacing: -.04em;
+}
+
+.logoMark {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #48b879);
+  box-shadow: 0 14px 26px rgba(11,122,75,.18);
+}
+
+.badge {
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.badge-green {
+  background: #e6f6ef;
+  border-color: #cfeee0;
+  color: #075f3b;
+}
+
+.badge-yellow {
+  background: #fff7e6;
+  border-color: #ffe9ad;
+  color: #9a650f;
+}
+
+.badge-red {
+  background: #fff3f0;
+  border-color: #ffd7d0;
+  color: #b42318;
+}
+
+.badge-gray {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  color: #475569;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255,255,255,.95);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.loginLayout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+}
+
+.loginBrand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(32px, 5vw, 64px);
+  background:
+    radial-gradient(circle at 12% 14%, rgba(255,255,255,.18), transparent 28%),
+    radial-gradient(circle at 82% 80%, rgba(255,255,255,.12), transparent 28%),
+    linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: #fff;
+}
+
+.loginBrand .logoMark {
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.22);
+}
+
+.loginBrand h1 {
+  max-width: 680px;
+  margin-top: 56px;
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: .95;
+}
+
+.loginBrand p {
+  max-width: 560px;
+  color: rgba(255,255,255,.78);
+  font-size: 1.05rem;
+}
+
+.brandFooter {
+  display: grid;
+  gap: 8px;
+  color: rgba(255,255,255,.72);
+  font-size: .9rem;
+}
+
+.loginPanel {
+  display: grid;
+  place-items: center;
+  padding: clamp(24px, 5vw, 64px);
+}
+
+.loginCard {
+  width: min(470px, 100%);
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-size: .74rem;
+  font-weight: 950;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.form label {
+  display: grid;
+  gap: 8px;
+  font-size: .9rem;
+  font-weight: 850;
+}
+
+.form input,
+.form select,
+.form textarea,
+.monthSelect {
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: #fff;
+  outline: none;
+}
+
+.passwordField {
+  position: relative;
+}
+
+.passwordField input {
+  width: 100%;
+  padding-right: 104px;
+}
+
+.passwordField button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  min-height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--primary-dark);
+  font-size: .8rem;
+  font-weight: 900;
+}
+
+.primaryButton,
+.primarySmall {
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary), #159a5e);
+  color: #fff;
+  font-weight: 950;
+  box-shadow: 0 15px 32px rgba(11,122,75,.18);
+}
+
+.primaryButton {
+  min-height: 48px;
+}
+
+.primarySmall {
+  min-height: 44px;
+  padding: 0 18px;
+}
+
+.secondaryButton {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-weight: 950;
+  padding: 0 16px;
+}
+
+.dangerButton {
+  min-height: 44px;
+  border: 1px solid #ffd7d0;
+  border-radius: 16px;
+  background: #fff3f0;
+  color: var(--danger);
+  font-weight: 950;
+}
+
+.error {
+  border: 1px solid #ffd7d0;
+  border-radius: 16px;
+  background: #fff3f0;
+  color: var(--danger);
+  padding: 12px;
+  font-weight: 800;
+}
+
+.appNav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(16px);
+}
+
+.appNavInner {
+  width: min(1320px, calc(100% - 32px));
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.navIdentity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.navTabs button {
+  min-height: 38px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--muted);
+  padding: 0 13px;
+  font-size: .83rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.navTabs button.active,
+.navTabs button:hover {
+  border-color: var(--line);
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+}
+
+.main {
+  width: min(1320px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+.heroCard {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, #fff, #edf8f3);
+}
+
+.heroCard h2,
+.sectionHead h2 {
+  margin-bottom: 10px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.heroMeta {
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255,255,255,.8);
+  padding: 20px;
+}
+
+.heroMeta div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  color: var(--muted);
+}
+
+.heroMeta div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.heroMeta strong {
+  color: var(--text);
+  text-align: right;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.statIcon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  font-weight: 950;
+  margin-bottom: 14px;
+}
+
+.statLabel {
+  color: var(--muted);
+  font-size: .84rem;
+  font-weight: 800;
+}
+
+.statValue {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 950;
+  letter-spacing: -.04em;
+}
+
+.statSub {
+  color: var(--primary-dark);
+  font-size: .85rem;
+  font-weight: 850;
+}
+
+.twoCol,
+.agendaGrid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 14px;
+}
+
+.threeCol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.infoBox,
+.leadCard {
+  margin-bottom: 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--soft);
+  padding: 14px;
+}
+
+.infoBox p,
+.leadCard p {
+  margin: 5px 0 0;
+  font-size: .9rem;
+}
+
+.tableWrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 950;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+td span {
+  display: block;
+  color: var(--muted);
+  font-size: .84rem;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  min-height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--primary-dark);
+  font-size: .78rem;
+  font-weight: 900;
+  padding: 0 10px;
+}
+
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sectionHead.compact {
+  margin-bottom: 12px;
+}
+
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.kanbanHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.calendarCard {
+  padding: 0;
+  overflow: hidden;
+}
+
+.calendarHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: var(--line);
+}
+
+.calendarLabel,
+.calendarDay {
+  background: #fff;
+  padding: 10px;
+}
+
+.calendarLabel {
+  text-align: center;
+  color: var(--muted);
+  font-size: .75rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.calendarDay {
+  min-height: 72px;
+  font-size: .86rem;
+}
+
+.calendarDay.today {
+  background: var(--primary-soft);
+}
+
+.calendarDay b {
+  display: inline-flex;
+  margin-top: 6px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  padding: 4px 7px;
+  font-size: .68rem;
+}
+
+.agendaList {
+  display: grid;
+  gap: 12px;
+}
+
+.agendaItem {
+  display: grid;
+  grid-template-columns: 82px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--soft);
+  padding: 14px;
+}
+
+.timeBox {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--primary-dark);
+  padding: 10px;
+  text-align: center;
+  font-weight: 950;
+}
+
+.agendaItem p {
+  margin: 3px 0 0;
+  font-size: .9rem;
+}
+
+.agendaItem button {
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-weight: 900;
+  padding: 0 12px;
+}
+
+.securityGrid {
+  display: grid;
+  gap: 18px;
+}
+
+.userList {
+  display: grid;
+  gap: 12px;
+}
+
+.userRow {
+  display: grid;
+  grid-template-columns: 46px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--soft);
+  padding: 14px;
+}
+
+.avatarSmall {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 950;
+}
+
+.userRow p {
+  margin: 3px 0 0;
+  font-size: .88rem;
+}
+
+.accessForm {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fff;
+  padding: 20px;
+}
+
+.accessForm h3 {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1120px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroCard,
+  .twoCol,
+  .agendaGrid,
+  .threeCol {
+    grid-template-columns: 1fr;
+  }
+
+  .kanban {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 920px) {
+  .loginLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .loginBrand {
+    min-height: 360px;
+  }
+
+  .appNavInner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 0;
+  }
+
+  .navTabs {
+    width: 100%;
+  }
+
+  .navTabs button {
+    flex: 1 1 130px;
+  }
+}
+
+@media (max-width: 620px) {
+  .main,
+  .appNavInner {
+    width: min(100% - 22px, 1320px);
+  }
+
+  .statsGrid,
+  .kanban {
+    grid-template-columns: 1fr;
+  }
+
+  .agendaItem,
+  .sectionHead,
+  .userRow {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .calendarDay {
+    min-height: 56px;
+    padding: 7px;
+  }
+}
+
+
+/* ============================= */
+/* MOBILE FINAL PASS */
+/* ============================= */
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
+.app,
+.main,
+.card,
+.heroCard,
+.tableWrap,
+.calendarCard,
+.agendaGrid,
+.twoCol,
+.threeCol,
+.statsGrid,
+.kanban {
+  min-width: 0;
+}
+
+.tableWrap {
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 18px;
+}
+
+.tableWrap table {
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .appNavInner {
+    width: min(100% - 28px, 1320px);
+  }
+
+  .navIdentity {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navTabs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    gap: 8px;
+  }
+
+  .navTabs button {
+    width: 100%;
+    min-width: 0;
+    padding: 9px 8px;
+    font-size: .78rem;
+    text-align: center;
+  }
+
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .heroCard {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .heroMeta {
+    width: 100%;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .twoCol,
+  .agendaGrid,
+  .threeCol {
+    grid-template-columns: 1fr;
+  }
+
+  .kanban {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  body {
+    background:
+      radial-gradient(circle at 6% 4%, rgba(11,122,75,.08), transparent 26%),
+      var(--bg);
+  }
+
+  .loginLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .loginBrand {
+    min-height: auto;
+    padding: 28px 20px;
+  }
+
+  .loginBrand h1 {
+    margin-top: 36px;
+    font-size: clamp(2.2rem, 12vw, 3.4rem);
+    line-height: .98;
+  }
+
+  .loginBrand p {
+    font-size: .98rem;
+  }
+
+  .brandFooter {
+    margin-top: 28px;
+    font-size: .82rem;
+  }
+
+  .loginPanel {
+    padding: 18px;
+    align-items: start;
+  }
+
+  .loginCard {
+    border-radius: 22px;
+    padding: 22px;
+  }
+
+  .loginCard h2,
+  .heroCard h2,
+  .sectionHead h2 {
+    font-size: clamp(1.9rem, 9vw, 2.55rem);
+    line-height: 1.02;
+  }
+
+  .appNavInner {
+    width: min(100% - 20px, 1320px);
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .logo {
+    font-size: .95rem;
+  }
+
+  .logoMark {
+    width: 36px;
+    height: 36px;
+    border-radius: 14px;
+  }
+
+  .badge {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .navTabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navTabs button {
+    min-height: 40px;
+    border-color: var(--line);
+    background: #fff;
+    font-size: .78rem;
+  }
+
+  .main {
+    width: min(100% - 20px, 1320px);
+    padding: 18px 0 34px;
+  }
+
+  .card {
+    border-radius: 22px;
+    padding: 18px;
+  }
+
+  .heroCard {
+    margin-bottom: 14px;
+  }
+
+  .heroMeta {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .heroMeta div {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+
+  .heroMeta strong {
+    text-align: left;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .statIcon {
+    width: 38px;
+    height: 38px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+  }
+
+  .statValue {
+    font-size: 1.75rem;
+  }
+
+  .sectionHead {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .sectionHead .primarySmall,
+  .primarySmall,
+  .primaryButton,
+  .secondaryButton,
+  .dangerButton {
+    width: 100%;
+  }
+
+  .form input,
+  .form select,
+  .form textarea,
+  .monthSelect {
+    width: 100%;
+  }
+
+  .kanban {
+    grid-template-columns: 1fr;
+  }
+
+  .calendarGrid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .calendarLabel {
+    padding: 7px 2px;
+    font-size: .62rem;
+  }
+
+  .calendarDay {
+    min-height: 54px;
+    padding: 6px 5px;
+    font-size: .72rem;
+  }
+
+  .calendarDay b {
+    padding: 3px 6px;
+    font-size: .58rem;
+  }
+
+  .agendaItem {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .timeBox {
+    width: max-content;
+    min-width: 82px;
+  }
+
+  .agendaItem button {
+    width: 100%;
+  }
+
+  .userRow {
+    grid-template-columns: 46px 1fr;
+  }
+
+  .userRow .badge {
+    grid-column: 1 / -1;
+  }
+
+  .threeCol {
+    gap: 12px;
+  }
+
+  .accessForm {
+    border-radius: 20px;
+    padding: 16px;
+  }
+
+  table {
+    min-width: 820px;
+  }
+
+  th, td {
+    padding: 11px 10px;
+    font-size: .82rem;
+  }
+
+  th {
+    font-size: .66rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .appNavInner,
+  .main {
+    width: min(100% - 14px, 1320px);
+  }
+
+  .card {
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .loginBrand {
+    padding: 24px 16px;
+  }
+
+  .loginPanel {
+    padding: 14px;
+  }
+
+  .loginCard {
+    padding: 18px;
+  }
+
+  .navTabs {
+    gap: 6px;
+  }
+
+  .navTabs button {
+    min-height: 38px;
+    padding: 7px 5px;
+    font-size: .72rem;
+  }
+
+  .heroCard h2,
+  .sectionHead h2 {
+    font-size: 1.85rem;
+  }
+
+  .heroCard p,
+  .sectionHead p,
+  .infoBox p,
+  .leadCard p,
+  .agendaItem p {
+    font-size: .86rem;
+  }
+
+  .calendarDay {
+    min-height: 48px;
+    font-size: .68rem;
+  }
+
+  .calendarLabel {
+    font-size: .56rem;
+  }
+
+  table {
+    min-width: 760px;
+  }
+
+  .statValue {
+    font-size: 1.55rem;
+  }
+}
+
+
+/* ============================= */
+/* LANDING PUBLICA OPTIMIVENTAS */
+/* ============================= */
+
+.landingPage {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.landingNav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(16px);
+}
+
+.landingNavInner {
+  width: min(1180px, calc(100% - 32px));
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.landingNav nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.landingNav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 850;
+}
+
+.landingNav button,
+.landingActions button,
+.workSection button,
+.landingForm button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 14px;
+  padding: 0 18px;
+  background: linear-gradient(135deg, var(--primary), #159a5e);
+  color: #fff;
+  font-weight: 950;
+  box-shadow: 0 15px 32px rgba(11,122,75,.18);
+}
+
+.landingActions .outline,
+.landingFooter button {
+  background: #fff;
+  color: var(--primary-dark);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+
+.landingHero {
+  width: min(1180px, calc(100% - 32px));
+  min-height: 660px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.landingHeroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background: linear-gradient(135deg, #fff, #edf8f3);
+  padding: clamp(30px, 5vw, 58px);
+  box-shadow: var(--shadow);
+}
+
+.landingHero h1 {
+  margin: 0;
+  font-size: clamp(2.7rem, 5vw, 5.3rem);
+  line-height: .95;
+}
+
+.landingHero p {
+  max-width: 680px;
+  margin: 24px 0 0;
+  font-size: 1.08rem;
+}
+
+.landingActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.heroPhoto {
+  position: relative;
+  min-height: 520px;
+  border-radius: 34px;
+  overflow: hidden;
+  background:
+    linear-gradient(to top, rgba(7,24,39,.72), rgba(7,24,39,.05)),
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,.38), transparent 22%),
+    linear-gradient(135deg, #0b7a4b, #8fd8ac);
+  box-shadow: var(--shadow);
+}
+
+.heroPhoto::before {
+  content: "";
+  position: absolute;
+  inset: 42px;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,.38);
+  background:
+    radial-gradient(circle at 26% 42%, rgba(255,255,255,.92) 0 8%, transparent 8.3%),
+    radial-gradient(circle at 64% 42%, rgba(255,255,255,.9) 0 8%, transparent 8.3%),
+    linear-gradient(90deg, rgba(255,255,255,.16), rgba(255,255,255,.04));
+}
+
+.photoCard {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  bottom: 26px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 22px;
+  background: rgba(255,255,255,.16);
+  color: #fff;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+}
+
+.photoCard span,
+.photoCard strong {
+  display: block;
+}
+
+.photoCard span {
+  color: rgba(255,255,255,.76);
+  font-size: .9rem;
+}
+
+.photoCard strong {
+  margin-top: 4px;
+  font-size: 1.25rem;
+}
+
+.landingGrid,
+.faqGrid {
+  width: min(1180px, calc(100% - 32px));
+  margin: 22px auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.landingCard,
+.faqGrid div,
+.processSection,
+.workSection {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255,255,255,.95);
+  padding: 26px;
+  box-shadow: var(--shadow);
+}
+
+.landingCard h2 {
+  margin-bottom: 10px;
+  font-size: 1.45rem;
+}
+
+.processSection,
+.workSection {
+  width: min(1180px, calc(100% - 32px));
+  margin: 22px auto;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.processSection h2,
+.workSection h2,
+.sectionTitle h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.steps div {
+  border-radius: 20px;
+  background: var(--primary-soft);
+  padding: 18px;
+}
+
+.steps strong {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--primary);
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.steps span {
+  font-weight: 900;
+}
+
+.sectionTitle {
+  width: min(1180px, calc(100% - 32px));
+  margin: 34px auto 12px;
+}
+
+.faqGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.faqGrid p {
+  margin-bottom: 0;
+}
+
+.workSection {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+}
+
+.workSection h2,
+.workSection p,
+.workSection .eyebrow {
+  color: #fff;
+}
+
+.workSection p {
+  color: rgba(255,255,255,.76);
+}
+
+.workSection button {
+  justify-self: end;
+  background: #fff;
+  color: var(--primary-dark);
+}
+
+.landingFooter {
+  width: min(1180px, calc(100% - 32px));
+  margin: 26px auto 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+}
+
+.landingFooter p {
+  margin: 8px 0 0;
+}
+
+.landingFooter button {
+  min-height: 42px;
+  border-radius: 14px;
+  padding: 0 16px;
+  font-weight: 900;
+}
+
+.landingModal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(7,24,39,.62);
+  backdrop-filter: blur(10px);
+}
+
+.landingModalCard {
+  position: relative;
+  width: min(680px, 100%);
+  max-height: 88vh;
+  overflow: auto;
+  border-radius: 28px;
+  background: #fff;
+  padding: 28px;
+  box-shadow: 0 36px 90px rgba(7,24,39,.32);
+}
+
+.landingModalCard.privacy {
+  width: min(760px, 100%);
+}
+
+.modalX {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  font-size: 1.3rem;
+  font-weight: 950;
+}
+
+.landingForm {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.landingForm label {
+  display: grid;
+  gap: 7px;
+  font-weight: 850;
+}
+
+.landingForm input,
+.landingForm select,
+.landingForm textarea {
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.landingForm textarea {
+  min-height: 96px;
+}
+
+@media (max-width: 920px) {
+  .landingNavInner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 0;
+  }
+
+  .landingNav nav {
+    gap: 10px;
+  }
+
+  .landingNav a {
+    font-size: .82rem;
+  }
+
+  .landingHero,
+  .processSection,
+  .workSection {
+    grid-template-columns: 1fr;
+  }
+
+  .landingHero {
+    min-height: auto;
+  }
+
+  .heroPhoto {
+    min-height: 420px;
+  }
+
+  .landingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workSection button {
+    justify-self: stretch;
+  }
+
+  .landingFooter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 620px) {
+  .landingNavInner,
+  .landingHero,
+  .landingGrid,
+  .processSection,
+  .workSection,
+  .sectionTitle,
+  .faqGrid,
+  .landingFooter {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .landingHeroContent,
+  .landingCard,
+  .faqGrid div,
+  .processSection,
+  .workSection {
+    border-radius: 22px;
+    padding: 20px;
+  }
+
+  .landingHero h1 {
+    font-size: clamp(2.25rem, 12vw, 3.4rem);
+  }
+
+  .landingHero p {
+    font-size: .96rem;
+  }
+
+  .landingActions {
+    display: grid;
+  }
+
+  .landingActions button,
+  .landingNav button {
+    width: 100%;
+  }
+
+  .heroPhoto {
+    min-height: 320px;
+    border-radius: 22px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
